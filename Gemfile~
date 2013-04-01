@@ -12,7 +12,7 @@ gem 'apachelogregex'
 
 gem 'jquery-rails'
 
-gem 'multi_json', '~> 1.7.2'
+gem 'multi_json', '~> 1.6.1'
 
 gem 'odt2html'
 gem 'mail_form'
