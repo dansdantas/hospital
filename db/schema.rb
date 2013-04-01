@@ -11,12 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401233034) do
+ActiveRecord::Schema.define(:version => 20130401235147) do
 
   create_table "especialidades", :force => true do |t|
     t.string   "descricao"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "medicos", :force => true do |t|
+    t.string   "nome"
+    t.string   "crm"
+    t.string   "telefone"
+    t.string   "logradouro"
+    t.integer  "especialidade_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "medicos", ["especialidade_id"], :name => "index_medicos_on_especialidade_id"
 
 end

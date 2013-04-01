@@ -1,0 +1,7 @@
+= semantic_form_for [@medico] do |form|
+  = form.input :nome, :label => 'Nome' 
+  = form.input :crm, :label => 'Crm'
+  = form.input :telefone, :label => 'Telefone'
+  = form.input :logradouro, :label => 'Logradouro'
+  = form.input :especialidade, :member_label => :descricao, :label => 'Especialidade'
+  = form.submit 'Salvar'
