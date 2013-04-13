@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @consul.data %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @consul.hora %>
+</p>
+
+<p>
+  <b>Paciente:</b>
+  <%= @consul.paciente %>
+</p>
+
+<p>
+  <b>Medico:</b>
+  <%= @consul.medico %>
+</p>
+
+
+<%= link_to 'Edit', edit_consul_path(@consul) %> |
+<%= link_to 'Back', consuls_path %>

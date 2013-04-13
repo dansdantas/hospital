@@ -1,0 +1,33 @@
+<%= form_for(@consul) do |f| %>
+  <% if @consul.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@consul.errors.count, "error") %> prohibited this consul from being saved:</h2>
+
+      <ul>
+      <% @consul.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </div>
+  <div class="field">
+    <%= f.label :hora %><br />
+    <%= f.text_field :hora %>
+  </div>
+  <div class="field">
+    <%= f.label :paciente %><br />
+    <%= f.text_field :paciente %>
+  </div>
+  <div class="field">
+    <%= f.label :medico %><br />
+    <%= f.text_field :medico %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
