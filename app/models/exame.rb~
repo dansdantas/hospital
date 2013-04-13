@@ -1,0 +1,4 @@
+class Exame < ActiveRecord::Base
+  belongs_to :consul
+  attr_accessible :data, :entrega
+end

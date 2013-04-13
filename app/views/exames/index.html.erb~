@@ -1,0 +1,27 @@
+<h1>Listing exames</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Entrega</th>
+    <th>Consul</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exames.each do |exame| %>
+  <tr>
+    <td><%= exame.data %></td>
+    <td><%= exame.entrega %></td>
+    <td><%= exame.consul.hora %></td>
+    <td><%= link_to 'Show', exame %></td>
+    <td><%= link_to 'Edit', edit_exame_path(exame) %></td>
+    <td><%= link_to 'Destroy', exame, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exame', new_exame_path %>

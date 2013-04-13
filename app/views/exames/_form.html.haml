@@ -1,0 +1,5 @@
+= semantic_form_for [@exame] do |form|
+  = form.input :data, :label => 'Data' 
+  = form.input :entrega, :label => 'Entrega'
+  = form.input :consul, :member_label => :hora, :label => 'Consul'
+  = form.submit 'Salvar'
